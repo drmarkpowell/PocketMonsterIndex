@@ -10,9 +10,9 @@ import SwiftData
 
 @main
 struct PocketMonsterIndexApp: App {
-    var sharedModelContainer: ModelContainer = {
+    static var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Pokemon.self, Berry.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -23,10 +23,13 @@ struct PocketMonsterIndexApp: App {
         }
     }()
 
+    @State private var appModel = AppModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabsView()
+                .environment(appModel)
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(Self.sharedModelContainer)
     }
 }

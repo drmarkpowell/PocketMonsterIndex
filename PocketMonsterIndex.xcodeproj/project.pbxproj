@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4D1FBD212C9F5DCD00184AF6 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1FBD202C9F5DCD00184AF6 /* NukeUI */; };
+		4D1FBD232C9F5DD100184AF6 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1FBD222C9F5DD100184AF6 /* Nuke */; };
+		4D1FBD302CA08ED900184AF6 /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1FBD2F2CA08ED900184AF6 /* CodableCSV */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4D2062142C84D3C600D51CED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1FBD212C9F5DCD00184AF6 /* NukeUI in Frameworks */,
+				4D1FBD302CA08ED900184AF6 /* CodableCSV in Frameworks */,
+				4D1FBD232C9F5DD100184AF6 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +94,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1FBD1F2C9F5DCD00184AF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4D2061F62C84D3C500D51CED = {
 			isa = PBXGroup;
 			children = (
 				4D2062012C84D3C500D51CED /* PocketMonsterIndex */,
 				4D2062162C84D3C600D51CED /* PocketMonsterIndexTests */,
 				4D2062202C84D3C600D51CED /* PocketMonsterIndexUITests */,
+				4D1FBD1F2C9F5DCD00184AF6 /* Frameworks */,
 				4D2062002C84D3C500D51CED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +142,9 @@
 			);
 			name = PocketMonsterIndex;
 			packageProductDependencies = (
+				4D1FBD202C9F5DCD00184AF6 /* NukeUI */,
+				4D1FBD222C9F5DD100184AF6 /* Nuke */,
+				4D1FBD2F2CA08ED900184AF6 /* CodableCSV */,
 			);
 			productName = PocketMonsterIndex;
 			productReference = 4D2061FF2C84D3C500D51CED /* PocketMonsterIndex.app */;
@@ -208,6 +228,10 @@
 			);
 			mainGroup = 4D2061F62C84D3C500D51CED;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4D1FBD1E2C9F5D3000184AF6 /* XCRemoteSwiftPackageReference "Nuke" */,
+				4D1FBD2E2CA08ED900184AF6 /* XCRemoteSwiftPackageReference "CodableCSV" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4D2062002C84D3C500D51CED /* Products */;
 			projectDirPath = "";
@@ -306,7 +330,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -346,7 +370,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -606,6 +630,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D1FBD1E2C9F5D3000184AF6 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
+		4D1FBD2E2CA08ED900184AF6 /* XCRemoteSwiftPackageReference "CodableCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dehesa/CodableCSV.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D1FBD202C9F5DCD00184AF6 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D1FBD1E2C9F5D3000184AF6 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		4D1FBD222C9F5DD100184AF6 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D1FBD1E2C9F5D3000184AF6 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		4D1FBD2F2CA08ED900184AF6 /* CodableCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D1FBD2E2CA08ED900184AF6 /* XCRemoteSwiftPackageReference "CodableCSV" */;
+			productName = CodableCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D2061F72C84D3C500D51CED /* Project object */;
 }
