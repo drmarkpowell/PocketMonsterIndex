@@ -10,6 +10,7 @@
 		4D1FBD212C9F5DCD00184AF6 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1FBD202C9F5DCD00184AF6 /* NukeUI */; };
 		4D1FBD232C9F5DD100184AF6 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1FBD222C9F5DD100184AF6 /* Nuke */; };
 		4D1FBD302CA08ED900184AF6 /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1FBD2F2CA08ED900184AF6 /* CodableCSV */; };
+		4DE290022CA234F9000B0DD8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4DE290012CA234F4000B0DD8 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,8 @@
 		4D2061FF2C84D3C500D51CED /* PocketMonsterIndex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketMonsterIndex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2062132C84D3C600D51CED /* PocketMonsterIndexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketMonsterIndexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D20621D2C84D3C600D51CED /* PocketMonsterIndexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketMonsterIndexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DE290012CA234F4000B0DD8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4DE290032CA23512000B0DD8 /* pokedex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pokedex.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -104,6 +107,8 @@
 		4D2061F62C84D3C500D51CED = {
 			isa = PBXGroup;
 			children = (
+				4DE290012CA234F4000B0DD8 /* README.md */,
+				4DE290032CA23512000B0DD8 /* pokedex.png */,
 				4D2062012C84D3C500D51CED /* PocketMonsterIndex */,
 				4D2062162C84D3C600D51CED /* PocketMonsterIndexTests */,
 				4D2062202C84D3C600D51CED /* PocketMonsterIndexUITests */,
@@ -249,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE290022CA234F9000B0DD8 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
