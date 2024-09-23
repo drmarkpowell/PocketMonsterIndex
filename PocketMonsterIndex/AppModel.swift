@@ -15,16 +15,10 @@ class AppModel {
     
     func navigateTo(category: String, index: Int) {
         if category == berriesTab.name.rawValue {
-            while !berriesTab.path.isEmpty {
-                berriesTab.path.removeLast(berriesTab.path.count)
-            }
-            berriesTab.path.append(index)
+            berriesTab.path = NavigationPath([index])
             selectedTabName = .berries
         } else if category == pokedexTab.name.rawValue {
-            while !pokedexTab.path.isEmpty {
-                pokedexTab.path.removeLast(pokedexTab.path.count)
-            }
-            pokedexTab.path.append(index)
+            pokedexTab.path = NavigationPath([index])
             selectedTabName = .pokedex
         }
     }

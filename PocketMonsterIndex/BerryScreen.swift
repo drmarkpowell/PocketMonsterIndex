@@ -24,7 +24,7 @@ struct BerryScreen: View {
                     }
                 }
             }
-            .navigationTitle(Text(berry.name))
+            .navigationTitle(Text(berry.name.capitalized))
         } else {
             ContentUnavailableView("Unable to find Berry #\(id)", systemImage: "questionmark.circle")
         }
