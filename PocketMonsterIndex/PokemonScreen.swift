@@ -23,7 +23,8 @@ struct PokemonScreen: View {
                             .frame(maxWidth: 256, maxHeight: 256)
                     }
                 }
-            }.navigationTitle(Text(pokemon.name))
+            }
+            .navigationTitle(Text(pokemon.name))
         } else {
             ContentUnavailableView("Unable to find Pokemon #\(id)", systemImage: "questionmark.circle")
         }

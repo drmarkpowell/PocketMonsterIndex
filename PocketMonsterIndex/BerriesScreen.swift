@@ -41,7 +41,7 @@ struct BerriesScreen: View {
                     }
                 }
             }
-            .navigationTitle(Text(appModel.berriesTab.name.rawValue))
+            .navigationTitle(Text(TabName.berries.title))
             .navigationDestination(for: Int.self) { id in
                 BerryScreen(id: id)
             }

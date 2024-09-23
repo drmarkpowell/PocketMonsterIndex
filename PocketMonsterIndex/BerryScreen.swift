@@ -23,7 +23,8 @@ struct BerryScreen: View {
                             .frame(maxWidth: 128, maxHeight: 128)
                     }
                 }
-            }.navigationTitle(Text(berry.name))
+            }
+            .navigationTitle(Text(berry.name))
         } else {
             ContentUnavailableView("Unable to find Berry #\(id)", systemImage: "questionmark.circle")
         }

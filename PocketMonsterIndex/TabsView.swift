@@ -11,24 +11,33 @@ import SwiftUI
 struct TabsView: View {
     @Environment(AppModel.self) var appModel
     @Environment(\.modelContext) private var modelContext
+    @State private var customization = TabViewCustomization()
     @Query private var pokemon: [Pokemon]
     @Query private var berries: [Berry]
 
     var body: some View {
         @Bindable var appModel = appModel
         TabView(selection: $appModel.selectedTabName) {
-            PokedexScreen()
-                .tabItem {
-                    Text(appModel.pokedexTab.name.rawValue)
-                }
-                .tag(appModel.pokedexTab.name)
+            Tab(
+                TabName.pokedex.title,
+                systemImage: "square.grid.3x3",
+                value: TabName.pokedex
+            ) {
+                PokedexScreen()
+            }
+            .customizationID(TabName.pokedex.rawValue)
 
-            BerriesScreen()
-                .tabItem {
-                    Text(appModel.berriesTab.name.rawValue)
-                }
-                .tag(appModel.berriesTab.name)
+            Tab(
+                TabName.berries.title,
+                systemImage: "carrot.fill",
+                value: TabName.berries
+            ) {
+                BerriesScreen()
+            }
+            .customizationID(TabName.berries.rawValue)
         }
+        .tabViewCustomization($customization)
+        .tabViewStyle(.sidebarAdaptable)
         .task {
             if pokemon.isEmpty {
                 await PokeAPI.shared.loadCSV(container: PocketMonsterIndexApp.sharedModelContainer)

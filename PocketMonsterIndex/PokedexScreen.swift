@@ -41,7 +41,7 @@ struct PokedexScreen: View {
                     }
                 }
             }
-            .navigationTitle(Text(appModel.pokedexTab.name.rawValue))
+            .navigationTitle(Text(TabName.pokedex.title))
             .navigationDestination(for: Int.self) { id in
                 PokemonScreen(id: id)
             }

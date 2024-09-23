@@ -29,6 +29,12 @@ struct PocketMonsterIndexApp: App {
         WindowGroup {
             TabsView()
                 .environment(appModel)
+                .onOpenURL { url in
+                    print("\(url.pathComponents)")
+                    guard let index = Int(url.pathComponents.last ?? "") else { return }
+                    guard let category = url.host() else { return }
+                    appModel.navigateTo(category: String(category), index: index)
+                }
         }
         .modelContainer(Self.sharedModelContainer)
     }
