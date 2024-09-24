@@ -29,6 +29,9 @@ struct PocketMonsterIndexApp: App {
         WindowGroup {
             TabsView()
                 .environment(appModel)
+                 // on macOS, this allows .onOpenURL to act on an existing window and not open another
+                 // https://stackoverflow.com/q/66647052
+                .handlesExternalEvents(preferring: Set(arrayLiteral: "*"), allowing: ["*"])
                 .onOpenURL { url in
                     print("\(url.pathComponents)")
                     guard let index = Int(url.pathComponents.last ?? "") else { return }
