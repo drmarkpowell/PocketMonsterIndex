@@ -12,14 +12,22 @@ class AppModel {
     var selectedTabName = TabName.pokedex
     var pokedexTab = TabModel(name: .pokedex)
     var berriesTab = TabModel(name: .berries)
-    
+
+    // On macOS, setting selected tab and nav path together did not create the new detail view reliably
+    // Creating a second Task to set the path after first setting the selected tab works better.
     func navigateTo(category: String, index: Int) {
         if category == berriesTab.name.rawValue {
-            berriesTab.path = NavigationPath([index])
             selectedTabName = .berries
+            Task { @MainActor in
+                berriesTab.path = NavigationPath()
+                berriesTab.path.append(index)
+            }
         } else if category == pokedexTab.name.rawValue {
-            pokedexTab.path = NavigationPath([index])
             selectedTabName = .pokedex
+            Task { @MainActor in
+                pokedexTab.path = NavigationPath()
+                pokedexTab.path.append(index)
+            }
         }
     }
 }
